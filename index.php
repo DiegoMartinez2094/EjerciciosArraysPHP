@@ -1,18 +1,18 @@
 
 <?php
+echo"<h2> naves espaciales con su respectiva masa</h2>";
+$naves_espaciales =["Atlantis"=>37.8,"Corazón de Oro"=> 90.5,"Discovery"=> 37.86,"Enano Rojo"=> 252.96,"Enterprise"=> 106.54,
+"Estrella de la Muerte"=> 90.52,"Galáctica"=> 113.8];
 
-$gravedadEnFuncion =["Mercurio"=>37.8,"Venus"=> 90.5,"Marte"=> 37.86,"Jupiter"=> 252.96,"Saturno"=> 106.54,"Urano"=> 90.52,"Neptuno"=> 113.8];
+echo"La masa de Atlantis es: ",$naves_espaciales["Atlantis"], " metros cubicos <br>";
+echo"La masa de Corazón de Oro  es: ",$naves_espaciales["Corazón de Oro"], " metros cubicos <br>";
+echo"La masa de Discovery es: ",$naves_espaciales["Discovery"], " metros cubicos <br>";
+echo"La masa de Enano Rojo es:  ",$naves_espaciales["Enano Rojo"], " metros cubicos <br>";
+echo"La masa de Enterprise es: ",$naves_espaciales["Enterprise"], " metros cubicos <br>";
+echo"La masa de Estrella de la Muerte es: ",$naves_espaciales["Estrella de la Muerte"], " metros cubicos <br>";
+echo"La masa de Galáctica es: ",$naves_espaciales["Galáctica"], " metros cubicos <br> <br>";
+echo "La suma de las masas de todas las naves es:";
+print_r(array_sum($naves_espaciales)) ;
+echo" metros cubicos";
 
-echo"gravedad de Mercurio es: ",$gravedadEnFuncion["Mercurio"], " veces a la de la tierra <br>";
-echo"gravedad de Venus  es: ",$gravedadEnFuncion["Venus"], " veces a la de la tierra <br>";
-echo"gravedad de Marte es: ",$gravedadEnFuncion["Marte"], " veces a la de la tierra <br>";
-echo"gravedad de Jupiter es:  ",$gravedadEnFuncion["Jupiter"], " veces a la de la tierra <br>";
-echo"gravedad de saturno es: ",$gravedadEnFuncion["Saturno"], " veces a la de la tierra <br>";
-echo"gravedad de Urano es: ",$gravedadEnFuncion["Urano"], " veces a la de la tierra <br>";
-echo"gravedad de Neptuno es: ",$gravedadEnFuncion["Neptuno"], " veces a la de la tierra <br> <br>";
-
-function gravedadReal ($a){
-    echo number_format($a*0.098, 2) ," gravedad real del planeta <br>";
-}
-array_walk($gravedadEnFuncion, 'gravedadReal');
 ?>
