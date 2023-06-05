@@ -13,8 +13,14 @@ foreach ($planetas as $planeta) {;
     echo '<p>'. $planeta. '</p>';
 }
 
-echo " <h2>planetas en comun de los dos sistemas:</h2>";
-$results = array_intersect($sistemas, $planetas);
+echo " <h2>planetas unicos en el sistema solar 1:</h2>";
+$results = array_diff($sistemas, $planetas);
+foreach ($results as $result) {;
+    echo '<p>'. $result. '</p>';
+}
+
+echo " <h2>planetas unicos en el sistema solar 2:</h2>";
+$results = array_diff($planetas,$sistemas);
 foreach ($results as $result) {;
     echo '<p>'. $result. '</p>';
 }
