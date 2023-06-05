@@ -8,19 +8,22 @@
 </head>
 <body>
    
-    <h1>Buscador de planetas aleatorio para misiones espaciales</h1>
-    <form method="POST">
-    <input type="submit" value="buscar" name="buscar" >
-    </form>
+    <h1>Eliminar especies duplicadas de alienigenas</h1>
+
  <?php
 
-$sistema_solar=["Mercurio", "Venus", "Tierra", "Marte", "Jupiter", "Saturno", "Urano", "Neptuno"];
-
-$claves_aleatorias = array_rand($sistema_solar,2);
-
-if (isset($_POST['buscar'])) { 
-echo"<br>el planeta elegido para la misión espacial es: ", $sistema_solar[$claves_aleatorias[0]] . "\n";
+$alienigenas=["Marciano", "Nordico", "Joviano", "Marciano", "Selenita", "Nordico", "Joviano", "Neptuniano"];
+echo " <h2>Alienigenas encontrados en la ultima misión:</h2>";
+foreach ($alienigenas as $alienigena) {;
+    echo '<p>'. $alienigena. '</p>';
 }
+echo"<h2> Resumen de razas encontradas:</h2>";
+$filtro= array_unique($alienigenas);
+
+foreach ($filtro as $filtro) {;
+    echo '<p>'. $filtro. '</p>';
+}
+
 ?>
 
 
