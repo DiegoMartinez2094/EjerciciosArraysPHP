@@ -1,18 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Planeta</title>
+</head>
+<body>
+   
+    <h1>Buscador de Plnetas </h1>
+    <h3>Ingrese el planeta a buscar seguido de oprimir el boton Buscar</h3>
+    <h3>Recuerde poner la primera letra del planeta en mayuscula y las demás en minuscula</h3>
+
+    <form method="POST">
+        <input type="text" name="planeta" placeholder="nombre planeta">
+        <input type="submit" value="buscar">
+     </form>
+</body>
+</html>
+
 
 <?php
-echo"<h2> naves espaciales con su respectiva masa</h2>";
-$naves_espaciales =["Atlantis"=>37.8,"Corazón de Oro"=> 90.5,"Discovery"=> 37.86,"Enano Rojo"=> 252.96,"Enterprise"=> 106.54,
-"Estrella de la Muerte"=> 90.52,"Galáctica"=> 113.8];
 
-echo"La masa de Atlantis es: ",$naves_espaciales["Atlantis"], " metros cubicos <br>";
-echo"La masa de Corazón de Oro  es: ",$naves_espaciales["Corazón de Oro"], " metros cubicos <br>";
-echo"La masa de Discovery es: ",$naves_espaciales["Discovery"], " metros cubicos <br>";
-echo"La masa de Enano Rojo es:  ",$naves_espaciales["Enano Rojo"], " metros cubicos <br>";
-echo"La masa de Enterprise es: ",$naves_espaciales["Enterprise"], " metros cubicos <br>";
-echo"La masa de Estrella de la Muerte es: ",$naves_espaciales["Estrella de la Muerte"], " metros cubicos <br>";
-echo"La masa de Galáctica es: ",$naves_espaciales["Galáctica"], " metros cubicos <br> <br>";
-echo "La suma de las masas de todas las naves es:";
-print_r(array_sum($naves_espaciales)) ;
-echo" metros cubicos";
+$sistema_solar=["Mercurio", "Venus", "Tierra", "Marte", "Jupiter", "Saturno", "Urano", "Neptuno"];
+
+session_start(); 
+
+if (isset($_POST['planeta'])) { 
+   
+    $planeta = $_POST['planeta']; 
+
+if(in_array($planeta,$sistema_solar)){
+    echo "<br>", $planeta, " Sí existe en el sistema solar";
+}
+    else{
+        echo "<br>", $planeta," No existe en el sistema solar";
+    }
+}
 
 ?>
+
+
+
