@@ -1,19 +1,15 @@
 
  <?php
-
-$lunasJupiters=["europa", "ganimedes", "ío", "calisto", "amaltea","adrastea"];
-echo " <h2>Algunas lunas de Jupiter:</h2>";
-foreach ($lunasJupiters as $lunasJupiter) {;
-    echo '<p>'. $lunasJupiter. '</p>';
+$planetas =[" Mercurio ", " Venus ", " Tierra ", " Marte ", " Júpiter ", " Saturno ", " Urano ", " Neptuno "];
+echo " <h2>Planetas en orden ascendente:</h2>";
+foreach ($planetas as $planeta) {;
+    echo '<p>'. $planeta. '</p>';
 }
-
-array_push($lunasJupiters, "tebe", "carmé", "autónoe");
-echo " <h2>lista más grande de las lunas de Jupiter:</h2>";
-foreach ($lunasJupiters as $lunasJupiter) {;
-    echo '<p>'. $lunasJupiter. '</p>';
+echo " <h2>Planetas en orden descendente:</h2>";
+$sistemas=array_reverse($planetas);
+foreach ($sistemas as $sistema) {;
+    echo '<p>'. $sistema. '</p>';
 }
-
-
 ?>
 
 
