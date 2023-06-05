@@ -8,12 +8,23 @@
 </head>
 <body>
    
-    <h1>Buscador de Plnetas </h1>
-    <h3>Ingrese el planeta a buscar seguido de oprimir el boton Buscar</h3>
-    <h3>Recuerde poner la primera letra del planeta en mayuscula y las demás en minuscula</h3>
-
+    <h1>Buscador de Naves</h1>
+    <h3>Ingrese la nave a buscar seguido de oprimir el boton Buscar</h3>
+   
     <form method="POST">
-        <input type="text" name="planeta" placeholder="nombre planeta">
+  
+        <select class="form-select" aria-label="Default select example" name="tipo_nave">
+            <option selected>TIPO DE NAVE</option>
+            <option value="nave tipo A">Nave tipo A</option>
+            <option value="nave tipo B">Nave tipo B</option>
+            <option value="nave tipo C">Nave tipo C</option>
+            <option value="nave tipo D">Nave tipo D</option>
+            <option value="nave tipo E">Nave tipo E</option> 
+            <option value="nave tipo F">Nave tipo F</option> 
+            <option value="nave tipo G">Nave tipo G</option> 
+            <option value="nave tipo H">Nave tipo H</option> 
+            <option value="nave tipo I">Nave tipo I</option> 
+        </select>
         <input type="submit" value="buscar">
      </form>
 </body>
@@ -22,19 +33,19 @@
 
 <?php
 
-$sistema_solar=["Mercurio", "Venus", "Tierra", "Marte", "Jupiter", "Saturno", "Urano", "Neptuno"];
+$tipos_de_naves=["nave tipo A", "nave tipo C", "nave tipo E", "nave tipo F", "nave tipo H"];
 
 session_start(); 
 
-if (isset($_POST['planeta'])) { 
+if (isset($_POST['tipo_nave'])) { 
    
-    $planeta = $_POST['planeta']; 
+    $nave = $_POST['tipo_nave']; 
 
-if(in_array($planeta,$sistema_solar)){
-    echo "<br>", $planeta, " Sí existe en el sistema solar";
+if(in_array($nave,$tipos_de_naves)){
+    echo "<br>", $nave, " Sí existe en la flota";
 }
     else{
-        echo "<br>", $planeta," No existe en el sistema solar";
+        echo "<br>", $nave," No existe en la flota";
     }
 }
 
